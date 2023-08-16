@@ -1,38 +1,196 @@
-.App {
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+}
+
+/* Split the screen in half */
+.split {
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the top side */
+.top {
+  top: 0;
+  background-color: lightseagreen;
+}
+
+/* Control the bottom side */
+.bottom {
+  top: 50%;
+  background-color: lightcyan;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the Card */
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wide {
+  width: 100%; /* Set the width to your desired value */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.custom-button {
+  background-color: lightseagreen !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+}
+
+.custom-button-up {
+  background-color: lightcyan !important;
+  color: black !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+}
+
+.custom-button-up:hover {
+  background-color: seagreen !important;
+}
+
+.seagreen{
+  color:seagreen !important
+}
+
+.custom-button:hover {
+  background-color: seagreen !important;
+}
+
+.big-text{
+  font-size: 2.5rem; 
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  padding-bottom: 15px;
+}
+
+.mid-text{
+  font-size: 2rem; 
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
+}
+
+.up{
+  color:lightcyan;
+}
+
+.down{
+  color: lightseagreen;
+}
+
+.red{
+  color: red;
+}
+
+.chosen-letter{
+  background-color: grey !important;
+}
+
+.custom-radio {
+  /* Make the radio boxes square-shaped */
+  width: 20px;
+  height: 20px;
+  /* Hide the default radio button appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add a custom border, background, and checkmark */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: white; /* White background */
+  outline: none; /* Remove focus outline */
+  cursor: pointer;
+  /* Center the custom checkmark inside the radio button */
+  position: relative;
+  margin-right: 5px;
+  padding-right: 10px;
+}
+
+.custom-radio:checked::before {
+  /* Style the custom checkmark when radio button is checked */
+  content: '\2713'; /* Checkmark symbol */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* Make the checkmark bigger */
+}
+
+.custom-button {
+  /* Add styles for the button */
+  font-family: Arial, sans-serif; /* Better font */
+  font-size: 18px; /* Make the text bigger */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  /* Styles when hovering over the button */
+  background-color: #0056b3; /* Darker blue background */
 }
