@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../App';
 
 export default function Answer({ playerIndex, setPlayerIndex }) {
-  const { randomText, players, NumPlayers, setRounds, Rounds, setRoundsOver, setGameOver, gameOver, roundsOver } = useContext(AppContext);
+  const { randomText, players, NumPlayers, setRounds, Rounds, setRoundsOver, setGameOver, gameOver, roundsOver, setChosenLetters } = useContext(AppContext);
   const [answer, setAnswer] = useState('');
 
   const handleSubmit = (e) => {
@@ -10,6 +10,7 @@ export default function Answer({ playerIndex, setPlayerIndex }) {
     if (answer.toLowerCase() === randomText.toLowerCase()) {
       setRoundsOver(true)
       setGameOver(true)
+      setChosenLetters(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
     }
     else
     {

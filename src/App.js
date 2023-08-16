@@ -18,11 +18,11 @@ function App() {
   const [startGame, setStartGame] = useState(false); //keep track of new games
   const [randomText, setRandomText] = useState("");
   const [completedRules, setCompletedRules] = useState(false); //for when to display game screen and close settings
-  const [chosenLetters, setChosenLetters] = useState([])
+  const [chosenLetters, setChosenLetters] = useState([]) //for correct letters in phrase
   const [letterPressed, setLetterPressed] = useState(false)
   const [roundsOver, setRoundsOver] = useState(false)
   const [gameOver, setGameOver] = useState(false)
-  const [usedLetters, setUsedLetters] = useState([])
+  const [usedLetters, setUsedLetters] = useState([]) //all used letters
 
   useEffect(() => { //when game start pick a random text
     if (startGame) {
