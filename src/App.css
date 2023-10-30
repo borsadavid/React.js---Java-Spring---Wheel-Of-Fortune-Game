@@ -6,6 +6,26 @@ body, h1, h2, h3, h4, h5, h6, p, button {
 
 }
 
+.custom-button {
+  background-color: lightseagreen !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+}
+
+.custom-button-up {
+  background-color: lightcyan !important;
+  color: black !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+}
+
 /* Split the screen in half */
 .split {
   height: 50%;
@@ -20,12 +40,14 @@ body, h1, h2, h3, h4, h5, h6, p, button {
 .top {
   top: 0;
   background-color: lightseagreen;
+  z-index: 0;
 }
 
 /* Control the bottom side */
 .bottom {
   top: 50%;
   background-color: lightcyan;
+  z-index: 2;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -35,6 +57,44 @@ body, h1, h2, h3, h4, h5, h6, p, button {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .split {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+  .mid-text {
+    font-size: 2.6vw !important; 
+  }
+  .big-text {
+    font-size: 3.6vw !important;
+  }
+  .card-title {
+    font-size: 2.3vw !important;
+  }
+  .card-text {
+    font-size: 1.5vw !important;
+  }
+  .form {
+    width: 100vw !important;
+  }
+  .card {
+    width: 60vw !important;
+    height: auto !important;
+  }
+  .custom-button{
+    font-size: 1vw !important;
+  }
+  .custom-button-up{
+    font-size: 1vw !important;
+  }
+  input[type="text"],
+  input[type="number"] {
+  width: 80% !important;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 }
 
 form {
@@ -83,26 +143,6 @@ input[type="number"] {
   margin-bottom: 20px;
 }
 
-.custom-button {
-  background-color: lightseagreen !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 4px !important;
-  padding: 8px 16px !important;
-  cursor: pointer !important;
-  font-size: 1rem !important;
-}
-
-.custom-button-up {
-  background-color: lightcyan !important;
-  color: black !important;
-  border: none !important;
-  border-radius: 4px !important;
-  padding: 8px 16px !important;
-  cursor: pointer !important;
-  font-size: 1rem !important;
-}
-
 .custom-button-up:hover {
   background-color: seagreen !important;
 }
@@ -131,6 +171,14 @@ input[type="number"] {
   padding-bottom: 10px;
 }
 
+.small-text{
+  font-size: 1.2rem; 
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
+}
+
 .up{
   color:lightcyan;
 }
@@ -140,7 +188,11 @@ input[type="number"] {
 }
 
 .red{
-  color: red;
+  color: red !important;
+}
+
+.blue{
+  color: blue;
 }
 
 .chosen-letter{
@@ -193,4 +245,70 @@ input[type="number"] {
 .custom-button:hover {
   /* Styles when hovering over the button */
   background-color: #0056b3; /* Darker blue background */
+}
+
+.score-view{
+  background-color: rgba(24, 113, 58, 0.3); /* Semi-transparent blue background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Add some padding for spacing */
+  color:lightcyan !important; /* Text color */
+  width: auto;
+  display: inline-block;
+}
+
+.top-left{
+  position: absolute;
+  top: 0;
+}
+
+.grid{
+  display: grid !important;
+}
+
+.games {
+  background-color: rgba(24, 113, 58, 0.3); /* Semi-transparent blue background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Add some padding for spacing */
+  color: lightcyan !important; /* Text color */
+  width: auto !important;
+  display: inline-block !important;
+  border: 1px solid black !important;
+  margin-left: 5px !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  margin-bottom: 10px;
+}
+
+
+.log-out{
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    display: inline-block;
+    background-color: rgba(24, 113, 58, 0.3); /* Semi-transparent blue background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Add some padding for spacing */
+    color:lightcyan !important; /* Text color */
+    width: auto;
+    z-index: 2 !important;
+}
+
+.register-input{
+  width: 40% !important;
+  padding: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.register {
+  background-color: rgb(155, 203, 203) !important;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.log-in-width{
+  width: 40vh !important;
 }

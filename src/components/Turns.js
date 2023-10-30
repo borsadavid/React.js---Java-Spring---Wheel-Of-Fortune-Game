@@ -3,8 +3,8 @@ import { AppContext } from '../App'
 import Answer from './Answer';
 
 export default function Turns(p) {
-    const {players, Rounds, NumPlayers, setRounds, letterPressed, setLetterPressed, roundsOver, setRoundsOver, gameOver} = useContext(AppContext);
-    const [playerIndex, setPlayerIndex] = useState(0);
+    const {players, Rounds, NumPlayers, setRounds, letterPressed, setLetterPressed, roundsOver, setRoundsOver, gameOver, playerIndex, setPlayerIndex} = useContext(AppContext);
+    
 
     const handleNextTurn = () => {
         if (Rounds>0)

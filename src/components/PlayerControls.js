@@ -1,9 +1,10 @@
 import React, {useContext} from 'react'
 import {AppContext} from '../App'
+import addPointsToPlayer from '../functions/Points';
 
 export default function Letters() {
     
-    const {setChosenLetters, randomText, setLetterPressed, usedLetters, setUsedLetters} = useContext(AppContext)
+    const {setChosenLetters, randomText, setLetterPressed, usedLetters, setUsedLetters, players, playerIndex, playerPoints, setPlayerPoints} = useContext(AppContext)
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   
     const CheckLetter = (letter) => {
@@ -11,7 +12,8 @@ export default function Letters() {
       setUsedLetters(prevUsedLetters => [...prevUsedLetters, letter])
       
       if (randomText.includes(letter))
-        {
+        { 
+          addPointsToPlayer(players, playerIndex, setPlayerPoints, 10);
           setChosenLetters(prevChosenLetters => [...prevChosenLetters, letter]);
         }
       else
