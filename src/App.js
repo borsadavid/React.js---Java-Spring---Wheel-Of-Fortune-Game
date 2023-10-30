@@ -116,7 +116,7 @@ function App() {
         )
       }
 
-      { completedRules && JWT== "" && <div className="top-left"><Score/></div>}
+      { completedRules && (!JWT=="") && <div className="top-left"><Score/></div>}
       
       </AppContext.Provider>
   );
