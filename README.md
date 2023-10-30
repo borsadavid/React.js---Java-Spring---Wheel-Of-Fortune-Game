@@ -15,7 +15,6 @@ Settings:
 Game:   
 ![image](https://github.com/borsadavid/React.js---Java-Spring---Wheel-Of-Fortune-Game/assets/117517496/5517ff30-1741-4b0f-b496-e5a9487745d4)
 ![image](https://github.com/borsadavid/React.js---Java-Spring---Wheel-Of-Fortune-Game/assets/117517496/58bf1468-09d4-4834-8a64-7afa91256352)
-![image](https://github.com/borsadavid/React.js-Wheel-Of-Fortune-Game/assets/117517496/177bae4b-0042-4948-a8d4-18ad36871dd4)
 ![image](https://github.com/borsadavid/React.js-Wheel-Of-Fortune-Game/assets/117517496/ef6c639f-ea15-46c6-ac45-4acdd0e08b26)
 
 
