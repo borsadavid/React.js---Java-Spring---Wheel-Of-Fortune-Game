@@ -88,7 +88,7 @@ function App() {
 
       {JWT !== "" ? (
           <>
-           <button className="log-out" onClick={(event) => { event.preventDefault(); localStorage.removeItem("jwt"); setJWT(""); setCompletedRules(false); }}>Log Out</button>
+           <button className="log-out" onClick={(event) => { event.preventDefault(); localStorage.removeItem("jwt"); setJWT(""); window.location.reload();}}>Log Out</button>
             <div className="split top">
               <div className="centered">
                 {completedRules ? (
