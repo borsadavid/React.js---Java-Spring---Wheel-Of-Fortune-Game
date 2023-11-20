@@ -1,15 +1,15 @@
 The backend consists of:
 
 
-login/registration with JWT tokens
+- login/registration with JWT tokens
 
 
-session management
+- session management
 
 
-game-history (on PostgreSQL DB):
+- game-history (on PostgreSQL DB):
 **requires 'game' database
-game winner, players, player's score
+(game winner, players, player's score)
 
 
-sentence randomizer
+- sentence randomizer
