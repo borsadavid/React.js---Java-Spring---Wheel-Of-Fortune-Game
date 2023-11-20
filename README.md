@@ -6,10 +6,10 @@ The backend consists of:
 
 - session management
 
-**requires 'game' database
+**requires 'game' database (on PostgreSQL DB)
 
 
-- game-history (on PostgreSQL DB):
+- game-history:
 (game winner, players, player's score)
 
 
