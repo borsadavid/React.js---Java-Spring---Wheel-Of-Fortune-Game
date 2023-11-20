@@ -10,7 +10,6 @@ The backend consists of:
 
 
 - game-history (on PostgreSQL DB):
-
 (game winner, players, player's score)
 
 
