@@ -29,12 +29,22 @@ function PlayerNames( {setNext} ) {
     return playerForms;
   };
 
+  const checkNamesValid = () => {
+    if (players.length == NumPlayers){
+      const valid = players.every( player => player != "" && player != undefined)
+      if (valid){
+      setStartGame(true);
+      setCompletedRules(true);
+      }
+    }
+  }
+
   return (
     <div style={{fontWeight: 'bold'}}>
       <h2>Enter Player Names</h2>
       {renderPlayerForms()}
       <button className='custom-button-up' onClick={() => setNext(false)}>Back</button>
-      <button className='custom-button-up' onClick={() => {setStartGame(true); setCompletedRules(true);}}>Start Game</button>
+      <button className='custom-button-up' onClick={() => checkNamesValid()}>Start Game</button>
     </div>
   );
 }
